@@ -1,0 +1,29 @@
+{
+  "manifest_version": 3,
+  "name": "AI Chat Outline",
+  "version": "0.0.0",
+  "description": "Automatically extract structured outlines from your AI chats",
+  "icons": {
+    "16": "assets/icons/icon16.png",
+    "32": "assets/icons/icon32.png",
+    "48": "assets/icons/icon48.png",
+    "128": "assets/icons/icon128.png"
+  },
+  "action": {
+    "default_title": "Open Side Panel",
+    "default_icon": {
+      "16": "assets/icons/icon16.png",
+      "32": "assets/icons/icon32.png"
+    }
+  },
+  "background": {
+    "service_worker": "background/background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://gemini.google.com/*"],
+      "js": ["content/content.js"]
+    }
+  ],
+  "permissions": ["sidePanel", "tabs"]
+}
