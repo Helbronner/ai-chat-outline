@@ -90,12 +90,12 @@ chrome.tabs.onActivated.addListener(async (activeInfo) => {
   });
 
   // Guard: Restricts synchronization broadcasts exclusively to the Gemini domain.
-  if (!tab.url.includes("gemini.google.com")) {
+  if (!tab?.url?.includes("gemini.google.com")) {
     return;
   }
 
   await chrome.runtime
-    .sendMessage({ action: "GLOBAL_TAB_CHANGED" })
+    .sendMessage({ action: "TRIGGER_QUESTION_FETCH" })
     .catch((err) => {
       // Intentional silence:
       // If the side panel is closed, this broadcast will trigger
