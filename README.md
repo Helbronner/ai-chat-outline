@@ -4,7 +4,7 @@ AI Chat Outline is a Chrome extension that automatically generates an outline of
 
 ## How to install
 
-1. Download the project by clicking the green **<> Code** button and selecting **Download ZIP**. Once the download is complete, unzip the file.
+1. Go to the [Release](https://github.com/Helbronner/ai-chat-outline/releases) page and download the latest release ZIP file. Once the download is complete, unzip the file.
 
 2. In Chrome, enter `chrome://extensions/` in the address bar to open the Extensions management page.
 
